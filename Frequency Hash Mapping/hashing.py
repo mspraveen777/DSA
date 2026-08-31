@@ -23,14 +23,24 @@ m = [1, 5, 10, 3, 12]
 
 # Using Dictionary
 
-hash_dict = {}
+# hash_dict = {}
+# for num in n:
+#     if num in hash_dict:
+#         hash_dict[num] += 1
+#     else:
+#         hash_dict[num] = 1
+# for num in m:
+#     if num in hash_dict:
+#         print(f"{num}: {hash_dict[num]}")
+#     else:
+#         print(f"{num}: 0")
+
+
+hash_list = [0] * 11
 for num in n:
-    if num in hash_dict:
-        hash_dict[num] += 1
+    hash_list[num] += 1
+for i in m:
+    if i < 0 or i > 10:
+        print(f"{i}: 0")
     else:
-        hash_dict[num] = 1
-for num in m:
-    if num in hash_dict:
-        print(f"{num}: {hash_dict[num]}")
-    else:
-        print(f"{num}: 0")
+        print(f"{i}: {hash_list[i]}")

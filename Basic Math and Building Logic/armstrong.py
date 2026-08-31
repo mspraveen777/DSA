@@ -13,4 +13,4 @@ def ArmStrong(n):
         return "Not Armstrong Number"
 
 
-print(ArmStrong(123))
+print(ArmStrong(153))
