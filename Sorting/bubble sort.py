@@ -15,5 +15,5 @@ def bubble_sort(nums):
     return nums
 
 
-no = [1, 2, 3, 4, 6, 5]
-print(bubble_sort(no))
+# no = [1, 2, 3, 4, 6, 5]
+print(bubble_sort(nums))
