@@ -1,5 +1,5 @@
-# nums = [1, 0, 2, 4, 3, 0, 0, 3, 5, 1]
-nums = [0, 1]
+nums = [1, 0, 2, 4, 3, 0, 0, 3, 5, 1]
+# nums = [0, 1]
 # Brute force
 # def move_Zeros(nums):
 #     n = len(nums)
