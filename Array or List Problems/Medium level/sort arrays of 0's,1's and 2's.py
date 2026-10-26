@@ -32,35 +32,36 @@ nums = [1, 2, 0, 2, 1, 0, 2, 0, 1, 0]
 # Optimal
 
 
-def sort_nums(nums):
-    n = len(nums)
-    low = 0
-    mid = 0
-    high = n - 1
-    while mid <= high:
-        if nums[mid] == 0:
-            nums[low], nums[mid] = nums[mid], nums[low]
-            mid += 1
-            low += 1
-        elif nums[mid] == 1:
-            mid += 1
-        else:
-            nums[mid], nums[high] = nums[high], nums[mid]
-            high -= 1
-    return nums
-
-
-print(sort_nums(nums))
-
-# def sort_nums(nums, left):
+# def sort_nums(nums):
 #     n = len(nums)
-#     while left < n:
-#         for i in range(left + 1, n):
-#             if nums[i] < nums[left]:
-#                 nums[left], nums[i] = nums[i], nums[left]
-#         left += 1
-
+#     low = 0
+#     mid = 0
+#     high = n - 1
+#     while mid <= high:
+#         if nums[mid] == 0:
+#             nums[low], nums[mid] = nums[mid], nums[low]
+#             mid += 1
+#             low += 1
+#         elif nums[mid] == 1:
+#             mid += 1
+#         else:
+#             nums[mid], nums[high] = nums[high], nums[mid]
+#             high -= 1
 #     return nums
 
 
-# print(sort_nums(nums, 0))
+# print(sort_nums(nums))
+
+
+# Mine solution
+def sort_nums(nums, left):
+    n = len(nums)
+    while left < n - 1:
+        if nums[left + 1] < nums[left]:
+            nums[left], nums[left + 1] = nums[left + 1], nums[left]
+        left += 1
+
+    return nums
+
+
+print(sort_nums(nums, 0))

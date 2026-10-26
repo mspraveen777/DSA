@@ -25,7 +25,7 @@ def remove_duplicates(nums):
             i += 1
             nums[i], nums[j] = nums[j], nums[i]
         j += 1
-    return i + 1, nums
+    return i + 1
 
 
 o = remove_duplicates(nums)
